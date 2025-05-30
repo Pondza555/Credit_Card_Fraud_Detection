@@ -1,0 +1,19 @@
+<h2>Credit Card Fraud Detection</h2>
+
+<form action="/predict" method="POST">
+    {% for v in range(1, 29) %}
+        <label for="V{{v}}">V{{v}}</label>
+        <input type="text" name="V{{v}}" required><br>
+    {% endfor %}
+    <label for="Hour">Hour</label>
+    <input type="text" name="Hour" required><br>
+    <label for="Amount">Amount</label>
+    <input type="text" name="Amount" required><br>
+
+    <input type="submit" value="Predict">
+</form>
+
+{% if predict_text %}
+    <h3>{{ predict_text }}</h3>
+{% endif %}
+
