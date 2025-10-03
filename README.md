@@ -77,28 +77,28 @@ Table
 ## Conclusion
 
 1. **Best Recall & Precision: XGBoost**
-- Test and tuning 3 difference model (logistic, xgboost, ANN), validate using recall & precision.
+  - Test and tuning 3 difference model (logistic, xgboost, ANN), validate using recall & precision.
 
 2. **Inference-Ready**
-- The model and scaler are saved as a file. (xgb_deploy.pkl, rob_scal.pkl) and can be immediately tested on new data via app.py.
+  - The model and scaler are saved as a file. (xgb_deploy.pkl, rob_scal.pkl) and can be immediately tested on new data via app.py.
 
 3. **Suitable for imbalanced fraud problems**
-- At a threshold of 0.20, the model yields a Recall of 82.65% and a Precision of 87.10%, with a very low FPR.
-- Reduces the risk of **Failure (FN)** without increasing the **Failure (FP)** unnecessarily.
+  - At a threshold of 0.20, the model yields a Recall of 82.65% and a Precision of 87.10%, with a very low FPR.
+  - Reduces the risk of **Failure (FN)** without increasing the **Failure (FP)** unnecessarily.
 
 4. **Threshold = Business Lever**
-- Want to **capture more** → Lower the threshold (Recall ↑, FP ↑)
-- Want to **control the review load** → Increase the threshold (Precision ↑, Recall ↓)
+  - Want to **capture more** → Lower the threshold (Recall ↑, FP ↑)
+  - Want to **control the review load** → Increase the threshold (Precision ↑, Recall ↓)
 
 5. **Path to Production**
-- Monitoring (drift/alerts), Re-training & re-calibration, **Explainability (SHAP)** for analysts, and **audit trail/privacy compliance**
+  - Monitoring (drift/alerts), Re-training & re-calibration, **Explainability (SHAP)** for analysts, and **audit trail/privacy compliance**
 
 ---
 
 ## Executive Summary
 
-- We built an end-to-end credit-card fraud detection pipeline—from data prep and modeling (XGBoost) to threshold tuning and deployment artifacts.
-- At threshold 0.20, the model achieves Recall (Fraud) 82.65%, Precision 87.10%, and an extremely low False Positive Rate (~0.021%), balancing risk of missed fraud and review workload.
-- The solution is ready for inference, and with cost-based threshold tuning, monitoring, and explainability, it can be moved toward real-world operations.
+We built an end-to-end credit-card fraud detection pipeline—from data prep and modeling (XGBoost) to threshold tuning and deployment artifacts. 
+At threshold 0.20, the model achieves Recall (Fraud) 82.65%, Precision 87.10%, and an extremely low False Positive Rate (~0.021%), balancing risk of missed fraud and review workload.
+The solution is ready for inference, and with cost-based threshold tuning, monitoring, and explainability, it can be moved toward real-world operations.
 
 
